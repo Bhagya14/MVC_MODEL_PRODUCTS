@@ -1,0 +1,72 @@
+﻿@model MVC_Model_Products.Models.ProductsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+
+
+</head>
+<body>
+    <div align="center">
+        <h4>ProductsModel</h4>
+        <hr />
+        <dl class="dl-horizontal" style="width:50%;text-align:left;">
+            <dt>
+                @Html.DisplayNameFor(model => model.productid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.productid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.productname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.productname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.productprice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.productprice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.productcategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.productcategory)
+            </dd>
+    
+            <dt>
+                <img height="200px" width="250px" src=@Model.productimageaddress />
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.productimageaddress)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", "Product", new { id = Model.productid }, null)
+    </p>
+</body>
+</html>
